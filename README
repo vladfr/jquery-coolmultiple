@@ -1,0 +1,22 @@
+/**
+ * coolMultiple jQuery plugin
+ *
+ * Transforms a select or a list of checkboxes into a nicer control.
+ * 
+ * Usage: 
+ * $('#my_multiple_select').coolMultiple();
+ * $('#my_checkbox_list_wrapper').coolMultiple({mode:'checkboxes'});
+ * 
+ * If you choose checkboxes, you need to run coolMultiple() on a div that's wrapping the checkboxes.
+ * Also, each checkbox and it's text must be wrapped by a tag (e.g. <label><input .../> Label text</label>)
+ * This is usually the way to do it anyways :)
+ * 
+ * Also needs some basic CSS or else it won't look like much. Check archive for a sample.
+ * 
+ * Tested with jQuery 1.3.2, 1.4.2
+ * 
+ * @todo auto-detect mode
+ * @version 1.0
+ * @author vlad fratila, vlad.fratila@gmail.com
+ * 
+ */

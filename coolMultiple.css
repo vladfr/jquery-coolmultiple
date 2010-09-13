@@ -1,0 +1,33 @@
+.hidden{display:none;}
+
+.coolmulti p{
+    margin:0; padding:0; line-height: 14px;
+}
+.coolmulti-scrollbox{
+    height: 250px;
+    overflow-y: scroll;
+    background: #fff;
+    border: 1px solid #ccc;
+    float:left;
+    padding: 5px 10px;
+    text-decoration:underline;
+}
+.coolmulti-scrollbox p{
+    padding: 2px 0;
+    cursor: pointer; cursor:hand;
+}
+.coolmulti-scrollbox .coolmulti-selected{
+    background: #FFF8AF;
+}
+.coolmulti-values{
+    font-weight: bold;
+    float:left;
+    margin-left: 15px;
+    width: 200px;
+}
+.coolmulti-values p{
+    padding: 2px 0;
+}
+.coolmulti-values p a{
+    margin-left: 5px;
+}
