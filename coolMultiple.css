@@ -1,4 +1,8 @@
 .hidden{display:none;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix {display: inline-block;}
+html[xmlns] .clearfix {display: block;}
+* html .clearfix { height: 1%; }
 
 .coolmulti p{
     margin:0; padding:0; line-height: 14px;

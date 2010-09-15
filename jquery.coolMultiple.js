@@ -39,7 +39,7 @@
             var selectobj = this;
             selectobj.hide();
             
-            selectobj.wrapper = selectobj.parent().append('<div id="'+selectobj.settings._id+'" class="coolmulti"></div>').find('div#'+selectobj.settings._id);
+            selectobj.wrapper = selectobj.parent().append('<div id="'+selectobj.settings._id+'" class="coolmulti clearfix"></div>').find('div#'+selectobj.settings._id);
             selectobj.div = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_scrollbox" class="coolmulti-scrollbox"></div>').find('div#'+selectobj.settings._id+'_scrollbox');
             selectobj.values = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_values" class="coolmulti-values"></div>').find('div#'+selectobj.settings._id+'_values');
             
