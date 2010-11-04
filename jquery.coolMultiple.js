@@ -42,6 +42,7 @@
             selectobj.wrapper = selectobj.parent().append('<div id="'+selectobj.settings._id+'" class="coolmulti clearfix"></div>').find('div#'+selectobj.settings._id);
             selectobj.div = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_scrollbox" class="coolmulti-scrollbox"></div>').find('div#'+selectobj.settings._id+'_scrollbox');
             selectobj.values = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_values" class="coolmulti-values"></div>').find('div#'+selectobj.settings._id+'_values');
+            if(typeof(this.settings.infotext) != 'undefined') selectobj.values.append('<div class="coolmulti-infotext">'+this.settings.infotext+'</div>');
             
             if(this.settings.mode == 'select'){
                 this.coolMultiple('init_select');
@@ -125,6 +126,7 @@
                 selectobj.coolMultiple('deselect', o);
                 return false;
             });
+            selectobj.values.find('.coolmulti-infotext').hide();
         },
         
         'deselect' : function(o){
@@ -150,6 +152,8 @@
             
             $('p#'+selectobj.settings._id+'_o_'+o).removeClass('coolmulti-selected');
             selectobj.values.find('p#'+selectobj.settings._id+'_os_'+o).remove();
+            
+            if(selectobj.values.find('p').length == 0) selectobj.values.find('.coolmulti-infotext').show();
         }
     };
 
