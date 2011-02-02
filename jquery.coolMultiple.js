@@ -1,18 +1,7 @@
 /**
  * coolMultiple jQuery plugin
  *
- * Transforms a select or a list of checkboxes into a nicer control.
- * 
- * Usage: 
- * $('#my_multiple_select').coolMultiple();
- * $('#my_checkbox_list_wrapper').coolMultiple({mode:'checkboxes'});
- * 
- * If you choose checkboxes, you need to run coolMultiple() on a div that's wrapping the checkboxes.
- * Also, each checkbox and it's text must be wrapped by a tag (e.g. <label><input .../> Label text</label>)
- * This is usually the way to do it anyways :)
- * 
- * Also needs some basic CSS or else it won't look like much. Check archive for a sample.
- * 
+ * Transforms a select or a list of checkboxes into a nicer control.+
  * Tested with jQuery 1.3.2, 1.4.2
  * 
  * @todo auto-detect mode
@@ -28,8 +17,9 @@
             var d = new Date();
             
             this.settings = {
-                delText : 'sterge',
+                delText : 'delete',
                 mode: 'select',
+				infotext: '',
                 _id : 'coolmulti_'+(d.getTime())
             };
             if(options) {
@@ -42,7 +32,7 @@
             selectobj.wrapper = selectobj.parent().append('<div id="'+selectobj.settings._id+'" class="coolmulti clearfix"></div>').find('div#'+selectobj.settings._id);
             selectobj.div = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_scrollbox" class="coolmulti-scrollbox"></div>').find('div#'+selectobj.settings._id+'_scrollbox');
             selectobj.values = selectobj.wrapper.append('<div id="'+selectobj.settings._id+'_values" class="coolmulti-values"></div>').find('div#'+selectobj.settings._id+'_values');
-            if(typeof(this.settings.infotext) != 'undefined') selectobj.values.append('<div class="coolmulti-infotext">'+this.settings.infotext+'</div>');
+            if(this.settings.infotext != '') selectobj.values.append('<div class="coolmulti-infotext">'+this.settings.infotext+'</div>');
             
             if(this.settings.mode == 'select'){
                 this.coolMultiple('init_select');
@@ -121,7 +111,7 @@
             }
             
             $('p#'+selectobj.settings._id+'_o_'+o).addClass('coolmulti-selected');
-            selectobj.values.append('<p id="'+selectobj.settings._id+'_os_'+o+'">'+text+'<a class="coolmulti-del" href="#">'+this.settings.delText+'</a></p>')
+            selectobj.values.append('<p id="'+selectobj.settings._id+'_os_'+o+'">'+text+'<a class="coolmulti-del" href="#">'+selectobj.settings.delText+'</a></p>')
             .find('a').click(function(){
                 selectobj.coolMultiple('deselect', o);
                 return false;

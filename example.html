@@ -10,7 +10,7 @@
 	<p> Transforms a select or a list of checkboxes into a nicer control.<br>
 	<br>
 	  Usage: <br>
-	  <code>$('#my_multiple_select').coolMultiple();<br>
+	  <code>$('#my_select').coolMultiple();<br>
 	  $('#my_checkbox_list_wrapper').coolMultiple({mode:'checkboxes'});<br>
 	  </code>
 	  <br>
@@ -20,78 +20,44 @@
 	  <br>
 	 Also needs some basic CSS or else it won't look like much.</p>
 
-	<select id="my_select" multiple="multiple"><option value="1">Bucuresti</option><option value="2">Constanta</option><option value="3">Calarasi</option><option value="4">Slobozia</option><option value="5" selected="selected">Braila</option><option value="6" selected="selected">Galati</option><option value="7" selected="selected">Vaslui</option><option value="8">Iasi</option><option value="9">Botosani</option><option value="10">Suceava</option><option value="11">Piatra-Neamt</option><option value="12">Bacau</option><option value="13">Focsani</option><option value="14">Buzau</option><option value="15">Ploiesti</option><option value="16">Alexandria</option><option value="17">Targoviste</option><option value="18">Pitesti</option><option value="19">Brasov</option><option value="20">Sfantu Gheorghe</option><option value="21">Miercurea-Ciuc</option><option value="22">Targu Mures</option><option value="23">Bistrita</option><option value="24">Slatina</option><option value="25">Sibiu</option><option value="26">Alba-Iulia</option><option value="27">Targu-Jiu</option><option value="28">Craiova</option><option value="29">Drobeta-Turnu Severin</option><option value="30">Deva</option><option value="31">Cluj-Napoca</option><option value="32">Zalau</option><option value="33">Baia Mare</option><option value="34">Satu Mare</option><option value="35">Oradea</option><option value="36">Arad</option><option value="37">Timisoara</option><option value="38">Resita</option><option value="39">Ramnicu Valcea</option><option value="40">Giurgiu</option><option value="41">Strainatate</option><option value="42">Oltenita</option><option value="43">Tarnaveni</option><option value="44">Fetesti</option><option value="45">Tulcea</option><option value="46">Lugoj</option><option value="47">Cisnadie</option><option value="48">Campina</option><option value="49">Campia-Turzii</option><option value="50">Falticeni</option><option value="51">Adjud</option><option value="52">Motru</option></select>           
-	<select id="my_select2" multiple="multiple"><option value="1">Bucuresti</option><option value="2">Constanta</option><option value="3">Calarasi</option><option value="4">Slobozia</option><option value="5" selected="selected">Braila</option><option value="6" selected="selected">Galati</option><option value="7" selected="selected">Vaslui</option><option value="8">Iasi</option><option value="9">Botosani</option><option value="10">Suceava</option><option value="11">Piatra-Neamt</option><option value="12">Bacau</option><option value="13">Focsani</option><option value="14">Buzau</option><option value="15">Ploiesti</option><option value="16">Alexandria</option><option value="17">Targoviste</option><option value="18">Pitesti</option><option value="19">Brasov</option><option value="20">Sfantu Gheorghe</option><option value="21">Miercurea-Ciuc</option><option value="22">Targu Mures</option><option value="23">Bistrita</option><option value="24">Slatina</option><option value="25">Sibiu</option><option value="26">Alba-Iulia</option><option value="27">Targu-Jiu</option><option value="28">Craiova</option><option value="29">Drobeta-Turnu Severin</option><option value="30">Deva</option><option value="31">Cluj-Napoca</option><option value="32">Zalau</option><option value="33">Baia Mare</option><option value="34">Satu Mare</option><option value="35">Oradea</option><option value="36">Arad</option><option value="37">Timisoara</option><option value="38">Resita</option><option value="39">Ramnicu Valcea</option><option value="40">Giurgiu</option><option value="41">Strainatate</option><option value="42">Oltenita</option><option value="43">Tarnaveni</option><option value="44">Fetesti</option><option value="45">Tulcea</option><option value="46">Lugoj</option><option value="47">Cisnadie</option><option value="48">Campina</option><option value="49">Campia-Turzii</option><option value="50">Falticeni</option><option value="51">Adjud</option><option value="52">Motru</option></select>           
+	<div style="clear:both"> 
+		<p>Where do you want to look for a cat?</p>	
+		<select id="my_select" multiple="multiple">
+			<option value="1">Ceiling</option>
+			<option value="2">teh intertubz</option>
+			<option value="3">Purgatory</option>
+			<option value="4">Manchester</option>
+			<option value="5" selected="selected">Egypt</option>
+			<option value="6" selected="selected">Basement</option>
+		</select>           
+	</div>
 	
-	<div id="my_checkbox_list_wrapper">
-		<p><input type="checkbox"  value="1" /> Bucuresti</p>
-		<p><input type="checkbox"  value="2" /> Constanta</p>
-		<p><input type="checkbox"  value="3" /> Calarasi</p>
+	<div style="clear:both">
+		<p>I want my cat to be:</p>
+		<div id="my_checkbox_list_wrapper">
+			<p><input type="checkbox"  value="1" /> cute</p>
+			<p><input type="checkbox"  value="2" /> fluffy</p>
+			<p><input type="checkbox"  value="3" /> furry</p>
 
-		<p><input type="checkbox"  value="4" /> Slobozia</p>
-		<p><input type="checkbox" checked="checked"; value="5" /> Braila</p>
-		<p><input type="checkbox" checked="checked"; value="6" /> Galati</p>
-		<p><input type="checkbox" checked="checked"; value="7" /> Vaslui</p>
-		<p><input type="checkbox"  value="8" /> Iasi</p>
-
-		<p><input type="checkbox"  value="9" /> Botosani</p>
-		<p><input type="checkbox"  value="10" /> Suceava</p>
-		<p><input type="checkbox"  value="11" /> Piatra-Neamt</p>
-		<p><input type="checkbox"  value="12" /> Bacau</p>
-		<p><input type="checkbox"  value="13" /> Focsani</p>
-
-		<p><input type="checkbox"  value="14" /> Buzau</p>
-		<p><input type="checkbox"  value="15" /> Ploiesti</p>
-		<p><input type="checkbox"  value="16" /> Alexandria</p>
-		<p><input type="checkbox"  value="17" /> Targoviste</p>
-		<p><input type="checkbox"  value="18" /> Pitesti</p>
-
-		<p><input type="checkbox"  value="19" /> Brasov</p>
-		<p><input type="checkbox"  value="20" /> Sfantu Gheorghe</p>
-		<p><input type="checkbox"  value="21" /> Miercurea-Ciuc</p>
-		<p><input type="checkbox"  value="22" /> Targu Mures</p>
-		<p><input type="checkbox"  value="23" /> Bistrita</p>
-
-		<p><input type="checkbox"  value="24" /> Slatina</p>
-		<p><input type="checkbox"  value="25" /> Sibiu</p>
-		<p><input type="checkbox"  value="26" /> Alba-Iulia</p>
-		<p><input type="checkbox"  value="27" /> Targu-Jiu</p>
-		<p><input type="checkbox"  value="28" /> Craiova</p>
-
-		<p><input type="checkbox"  value="29" /> Drobeta-Turnu Severin</p>
-		<p><input type="checkbox"  value="30" /> Deva</p>
-		<p><input type="checkbox"  value="31" /> Cluj-Napoca</p>
-		<p><input type="checkbox"  value="32" /> Zalau</p>
-		<p><input type="checkbox"  value="33" /> Baia Mare</p>
-
-		<p><input type="checkbox"  value="34" /> Satu Mare</p>
-		<p><input type="checkbox"  value="35" /> Oradea</p>
-		<p><input type="checkbox"  value="36" /> Arad</p>
-		<p><input type="checkbox"  value="37" /> Timisoara</p>
-		<p><input type="checkbox"  value="38" /> Resita</p>
-
-		<p><input type="checkbox"  value="39" /> Ramnicu Valcea</p>
-		<p><input type="checkbox"  value="40" /> Giurgiu</p>
-		<p><input type="checkbox"  value="41" /> Strainatate</p>
-		<p><input type="checkbox"  value="42" /> Oltenita</p>
-		<p><input type="checkbox"  value="43" /> Tarnaveni</p>
-
-		<p><input type="checkbox"  value="44" /> Fetesti</p>
-		<p><input type="checkbox"  value="45" /> Tulcea</p>
-		<p><input type="checkbox"  value="46" /> Lugoj</p>
-		<p><input type="checkbox"  value="47" /> Cisnadie</p>
-		<p><input type="checkbox"  value="48" /> Campina</p>
-
-		<p><input type="checkbox"  value="49" /> Campia-Turzii</p>
-		<p><input type="checkbox"  value="50" /> Falticeni</p>
-		<p><input type="checkbox"  value="51" /> Adjud</p>
-		<p><input type="checkbox"  value="52" /> Motru</p>
+			<p><input type="checkbox"  value="4" /> without fur</p>
+			<p><input type="checkbox" checked="checked"; value="5" /> a master chef</p>
+			<p><input type="checkbox" checked="checked"; value="6" /> 100% pure black</p>
+			<p><input type="checkbox" checked="checked"; value="7" /> great</p>
+			<p><input type="checkbox"  value="8" /> a lolcat!</p>
+		</div>
 	</div>
 
+	<h3>Options</h3>
+	
+	<p>Call coolMultiple({}) with the following options:</p>
+	<ul>
+		<li>'delText' - html or text for the delete anchor that appears next to every selected item</li>
+		<li>'infotext' - html or text to be displayed in the right-side pane when no selections are made</li>
+	</ul>
 	
 	<script type="text/javascript">
 		$('#my_select').coolMultiple();
-		$('#my_select2').coolMultiple();
+		$('#my_checkbox_list_wrapper').coolMultiple({mode:'checkboxes', delText:'remove'});
 		
 		
 		//Uncomment to re-show the elements, so you can see what the script does.
